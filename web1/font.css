@@ -1,0 +1,10 @@
+@charset "utf-8";
+@font-face{
+    font-family: 'Habbo';
+    src: local("Habbo")
+    url("./fonts/HabboFont.eot") format("embedded-opentype"),
+    url("./fonts/HabboFont.woff") format("woff"),
+    url("./fonts/HabboFont.ttf") format("truetype"),
+    url("./fonts/HabboFont.otf") format("opentype"),
+    url("./fonts/HabboFont.svg") format("svg"),
+}

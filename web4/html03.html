@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>인터랙션 요소</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        button, input, label, select {margin: 0;padding: 0;outline: 0;bottom: 0;background-color:transparent;cursor: pointer;}
+        input[type=text] {cursor: text;}
+        a{text-decoration: none;}
+        .btn{display: block; width: 64px; height: 64px; line-height: 64; text-align: center; font-size:16px; font-weight: 600; border-radius: 10px; color: #333; float: left; margin: 24px;   }
+        
+        
+        #ft {clear: both; height: 200px; background-color: lightpink; color: #fff;}
+        #fta {color: #333;}
+        .blank{clear: both; width: 100vw; height: 100px; background-color: #bbb;}
+        .hl {}
+        i{float: left; color: hotpink;padding-right: 10px; font-size: 35px;}
+        .txt{display: block; padding-top: 7px; padding-bottom: 70px; font-size: 18px; color: deeppink;}
+        #ck_con1 {overflow: hidden; height: 0px; transition: 0.6s;}
+        #ck1:checked ~ #ck_con1 {height: 300px;}
+        
+        #ck_con2{margin: 0; padding: 0; width: 100vw; height: 100vh; background-color:rgba(0,0,0,0.7); position: fixed; left: 0; top:0; z-index: 90;
+        visibility: hidden; opacity: 0; transition: 0.6s;}
+        #ck2:checked ~ #ck_con2 {visibility: visible; opacity: 1;}
+        #ck_con2 .img_fr {width: 500px; height: 550px; margin: 50px auto; overflow: hidden; position: relative;}
+        #ck_con2 .img_fr hgroup {height: 50px; line-height: 50; color: #fff; background-color: lavender; padding-left: 30px;}
+        #ck_con2 .close_btn {display: block; width: 50px; height: 50px; text-align: center; line-height: 50; color: #fff;
+        position: absolute; right: 0; top:20px;}
+        
+        
+        #ra_con1{clear: both;}
+        .accr{ list-style: none;}
+        .accr label{display: block; color: #333; width: line-height: 40; background-color: #bbb;}
+        .accr_con {height: 0px; overflow: hidden; transition: 0.6s;}
+        .accr_con a {display: block; height: 40px; color: lightpink;}
+        #ra1:checked ~ #ra_con1 .item1.accr_con {height: 160px;}
+        #ra1:checked ~ #ra_con1 .item2.accr_con {height: 160px;}
+        #ra1:checked ~ #ra_con1 .item3.accr_con {height: 160px;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h2 class="page_tit">여러가지 인터랙션이 걸리는 요소</h2>
+        <p class="page_com">인터랙션 요소는 같은 요소나 다른 요소를 서로 겹쳐 사용할 수 없다.</p>
+        <div class="int1">
+            <a href="" class="btn">버튼</a>
+            <button class="btn">버튼</button>
+            <input type="button" class="btn" value="버튼">
+            <input type="submit" class="btn" value="버튼">
+            <input type="reset" class="btn" value="버튼">
+            <input type="text" id="m_id" placeholder="아이디 입력" class="in
+            _data"><br>
+            <label for="m_id" class="btn">레이블</label>
+            <input type="image" src="" alt="이미지 버튼">
+            <div class="filebox"></div>
+            <input type="file" class="btn">
+        </div>
+    </div>
+    <div class="wrap">
+        <h2 class="page_tit">버튼의 종류 -마이크로 인터랙션1</h2>
+        <div class="int2">
+            <a href="" class="btn2">
+                <span class="btn_txt">버튼2</span>
+            </a>
+            <a href="" class="btn2">
+                <span class="btn_txt">버튼2</span>
+            </a>
+            <a href="" class="btn2">
+                <span class="btn_txt">버튼2</span>
+            </a>
+        </div>
+    </div>
+    <div class="wrap">
+        <h2 class="page_tit">버튼의 종류 -마이크로 인터랙션2</h2>
+        <div class="int3">
+            <a href="" class="btn3">
+                <span class="btn_txt">버튼2</span>
+            </a>
+            <a href="" class="btn3">
+                <span class="btn_txt">버튼2</span>
+            </a>
+            <a href="" class="btn3">
+                <span class="btn_txt">버튼2</span>
+            </a>
+        </div>
+    </div>
+    <div class="wrap">
+        <h2 class="page_tit">버튼의 종류 -마이크로 인터랙션3</h2>
+        <div class="int4">
+            <a href="" class="btn4">
+                <span class="btn_txt">버튼2</span>
+            </a>
+            <a href="" class="btn4">
+                <span class="btn_txt">버튼2</span>
+            </a>
+            <a href="" class="btn4  ">
+                <span class="btn_txt">버튼2</span>
+            </a>
+        </div>
+    </div>
+    
+    <div class="wrap">
+        <h2 class="page_tit">하이퍼링크 요소의 활용</h2>
+        <a href="http://www.google.com" class="hl" target="_self">
+        <i class="xi-external-link"></i>
+        <span class="txt">외부 사이트로 이동-구글</span>
+        </a>
+        <a href="#ft" class="hl">
+        <i class="xi-link"></i>
+        <span class="txt">내부 사이트의 하단으로 이동-마이크로링크</span>
+        </a>
+        <a href="uiux_guide.pptx" class="hl">
+        <i class="xi-file-download"></i>
+        <span class="txt">문서 다운로드 - uiux_guide</span>
+        </a>
+        <a href="mailto: dutj7618@naver.com" class="hl">
+        <i class="xi-mail"></i>
+        <span class="txt">이메일 보내기</span>
+        </a>
+         <a href="mailto: dutj7618@naver.com?subject='여기는제목'&cc=dudtj7618@naver.com&bcc=dudtj7618@gmail.com&body" class="hl">
+        <i class="xi-mail"></i>
+        <span class="txt">제목 달아서 이메일 보내기</span>
+        </a>
+        <a href="tel:01039977618" class="hl">
+        <i class="xi-call"></i>
+        <span class="txt">전화걸기</span>
+        </a>
+        <a href="sms:010-3997-7618" class="hl">
+        <i class="xi-message"></i>    
+        <span class="txt">문자보내기</span>
+        </a>
+        <div class="wrap">
+            <h2 class="page_tit">레이블과 체크박스의 활용1</h2>
+        <input type="checkbox" id="ck1" class="hid_item">
+        <label for="ck1"><span class="txt">체크박스의 이용</span></label>
+        <div class="ck_con" id="ck_con1">
+            <img src="http://placehold.it/900x300/300" alt="이미지">   
+        </div>
+    </div>
+    <div class="wrap">
+            <h2 class="page_tit">레이블과 체크박스의 활용2</h2>
+            <input type="checkbox" id="ck2" class="hid_item">
+             <label for="ck2"><span class="txt">오프너로 이용</span></label>
+             <div class="ck_con" id="ck_con2">
+                 <div class="img_fr">
+                   <hgroup><h3 class="ck_con_tit">팝업 대화상자 제목</h3>
+                   </hgroup>
+                   <img src="http://placehold.it/500X500/a8e" alt="이미지">
+                   <label for="ck2" class="close_btn">
+                       <i class="xi-close"></i>
+                   </label>  
+                 </div>
+             </div>
+        </div>
+        <div class="wrap">
+            <h2 class="page_tit">레이블과 라디오 버튼의 활용1</h2>
+            <input type="radio" id="ra1" class="hid_item" name="ra1">
+            <input type="radio" id="ra2" class="hid_item" name="ra1">
+              <input type="radio" id="ra3" class="hid_item" name="ra1">
+            <div class="ra_con" id="ra_con1">
+                <ul class="accr">
+                    <li class="item1">
+                        <label for="ra1">아코디온제목1</label>
+                        <div class="accr_con">
+                            <a href="">아코디온내용1</a>
+                            <a href="">아코디온내용2</a>
+                            <a href="">아코디온내용3</a>
+                            <a href="">아코디온내용4</a>
+                        </div>
+                    </li>
+                    <li class="item2">
+                        <label for="ra2">아코디온제목2</label>
+                        <div class="accr_con">
+                            <a href="">아코디온내용1</a>
+                            <a href="">아코디온내용2</a>
+                            <a href="">아코디온내용3</a>
+                            <a href="">아코디온내용4</a>
+                        </div>
+                    </li>
+                    <li class="item3">
+                        <label for="ra3">아코디온제목3</label>
+                        <div class="accr_con">
+                            <a href="">아코디온내용1</a>
+                            <a href="">아코디온내용2</a>
+                            <a href="">아코디온내용3</a>
+                            <a href="">아코디온내용4</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="blank"></div><div class="blank"></div>
+        <div class="blank"></div><div class="blank"></div>
+    </div>
+    <footer id="ft">여기는 푸터입니다.
+    <a href="#" class="hl">임시링크</a>
+    </footer>
+</body>
+</html>

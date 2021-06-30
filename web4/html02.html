@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>목록 관련 요소</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+    .wrap {margin: 40px; padding: 20px; border: 2px solid #333;}
+    .page_tit {text-align: center; padding: 40px 10px 10px 0px;}
+    
+    .lst7{clear: both; list-style: none; height: 50px;}
+    .lst7 li{float:left; height: 48px; padding-right: 32px;}
+    .lst7 li a {color:lightpink; font-size: 50px;}
+    .lst7 li a:hover{ color: hotpink;}
+        
+    .lst8{clear: both; list-style: none; height: 70px;}
+    .lst8 li {float: left;}
+    .lst8 li a {display: block; width: 80px;height: 60px; overflow: hidden;}
+    .lst8 li a img{transition: 0.6s; filter: grayscale(100%)}
+    .lst8 li a:hover img {filter: grayscale(0%); transform: scale(1.6);}
+        
+    .lst10 {clear: both;}
+    .lst10:after {content: ""; clear: both; display: block;}    
+    .lst10 ul {width: 120px; float:left; margin-top: 10px; margin-bottom: 50px;}
+    .lst10 ul.item1 {list-style: none;}
+    .lst10 ul.item2 {list-style: disc;}
+    .lst10 ul.item3{list-style: circle;}
+    .lst10 ul.item4{list-style: square;}
+    .lst10 ul.item5{list-style: decimal;}
+    .lst10 ul.item6{list-style: decimal-leading-zero;}
+    .lst10 ul.item7{list-style: georgian;}
+    .lst10 ul.item8{list-style: hebrew;}
+    .lst10 ul.item9{list-style: hiragana;}
+    .lst10 ul.item10{list-style: katakana;}
+    .lst10 ul.item11{list-style: lower-alpha;}
+    .lst10 ul.item12{list-style: lower-greek;}
+    .lst10 ul.item13{list-style: lower-roman;}
+    .lst10 ul.item14{list-style: lower-latin;}
+    .lst10 ul.item15{list-style: upper-alpha;}
+    .lst10 ul.item16{list-style: upper-greek;}
+    .lst10 ul.item17{list-style: upper-roman;}
+    .lst10 ul.item18{list-style: upper-latin;}
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h2 class="page_tit">순서형 목록</h2>
+        <p class="page_com">type: 1, a, A, i, I 등이 사용가능하나 html5의 웹 표준에서는 사용하지 않도록 한다.</p>
+        <ol class="lst1" type="I">
+            <li><span>카테고리1</span></li>
+            <li><span>카테고리2</span></li>
+            <li><span>카테고리3</span></li>
+            <li><span>카테고리4</span></li>
+            <li><span>카테고리5</span></li>
+        </ol>
+    </div>
+    <div class="wrap">
+        <h2 class="page_tit">비순서형 목록 - 기본</h2>
+        <p class="page_com">type: disc, circle, square 사용가능하나 html5의 웹 표준에서는 사용하지 않도록 한다.</p>
+        <ul class="lst2" type=square>
+            <li><a href="">기본메뉴1</a></li>
+            <li><a href="">기본메뉴2</a></li>
+            <li><a href="">기본메뉴3</a></li>
+            <li><a href="">기본메뉴4</a></li>
+            <li><a href="">기본메뉴5</a></li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="page_tit">나열형 목록 - 기본</h2>
+        <p class="page_com">dl요소가 부모 요소이며, 자식 요소로 목록에 대한 제목을 나타내는 dt요소와 데이터 목록을 나타내는 dd가 있음</p>
+        <dl class="lst3">
+            <dt>나열형 목록 제목</dt>
+            <dd><a href="">나열목록1</a></dd>
+            <dd><a href="">나열목록2</a></dd>
+            <dd><a href="">나열목록3</a></dd>
+            <dd><a href="">나열목록4</a></dd>
+            <dd><a href="">나열목록5</a></dd>
+        </dl>
+    </div>
+    <div class="wrap">
+        <h2 class="page_tit">순서형 목록 - 이중구조</h2>
+        <p class="page_com">이중구조일 경우는 ol요소의 그 자식인 li의 내부에 ol요소를 배치하여야 한다.</p>
+        <ol>
+            <lst4>
+                <li>
+                    <span>1차메뉴1</span>
+                    <ol class="lst4_sub">
+                        <li><span>2차 메뉴1</span></li>
+                        <li><span>2차 메뉴2</span></li>
+                        <li><span>2차 메뉴3</span></li>
+                        <li><span>2차 메뉴4</span></li>
+                    </ol>
+                </li>
+                <li>
+                    <span>1차메뉴2</span>
+                    <ol class="lst4_sub">
+                        <li><span>2차 메뉴1</span></li>
+                        <li><span>2차 메뉴2</span></li>
+                        <li><span>2차 메뉴3</span></li>
+                        <li><span>2차 메뉴4</span></li>
+                    </ol>
+                </li>
+                <li>
+                    <span>1차메뉴3</span>
+                    <ol class="lst4_sub">
+                        <li><span>2차 메뉴1</span></li>
+                        <li><span>2차 메뉴2</span></li>
+                        <li><span>2차 메뉴3</span></li>
+                        <li><span>2차 메뉴4</span></li>
+                    </ol>
+                </li>
+                <li>
+                    <span>1차메뉴4</span>
+                    <ol class="lst4_sub">
+                        <li><span>2차 메뉴1</span></li>
+                        <li><span>2차 메뉴2</span></li>
+                        <li><span>2차 메뉴3</span></li>
+                        <li><span>2차 메뉴4</span></li>
+                    </ol>
+                </li>
+            </lst4>
+        </ol>
+    </div>
+    <div class="wrap">
+        <h2 class="page_tit">비순서형 목록- 이중구조</h2>
+        <p class="page_com">이중구조일 경우는 ul요소의 그 자식인 li의 내부에 ul요소를 배치하여야 한다.</p>
+        <ul class="lst5">
+            <li>
+                <a href="" class="dp1">1차 메뉴</a>
+                <ul class="lst5_sub">
+                  <li>
+                      <a href="" class="dp2">2차메뉴1</a>
+                      <ul class="lst_detail">
+                          <li><a href="">3차메뉴1</a></li>
+                          <li><a href="">3차메뉴2</a></li>
+                          <li><a href="">3차메뉴3</a></li>
+                      </ul>
+                  </li>
+                </ul>
+            </li>
+            <li>
+                <a href="" class="dp1">1차 메뉴</a>
+                <ul class="lst5_sub">
+                    <li><a href="" class="dp2">2차메뉴1</a></li>
+                    <li><a href="" class="dp2">2차메뉴2</a></li>
+                    <li><a href="" class="dp2">2차메뉴3</a></li>
+                    <li><a href="" class="dp2">2차메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="" class="dp1">1차 메뉴</a>
+                <ul class="lst5_sub">
+                    <li><a href="" class="dp2">2차메뉴1</a></li>
+                    <li><a href="" class="dp2">2차메뉴2</a></li>
+                    <li><a href="" class="dp2">2차메뉴3</a></li>
+                    <li><a href="" class="dp2">2차메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="" class="dp1">1차 메뉴</a>
+                <ul class="lst5_sub">
+                    <li><a href="" class="dp2">2차메뉴1</a></li>
+                    <li><a href="" class="dp2">2차메뉴2</a></li>
+                    <li><a href="" class="dp2">2차메뉴3</a></li>
+                    <li><a href="" class="dp2">2차메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="" class="dp1">1차 메뉴</a>
+                <ul class="lst5_sub">
+                    <li><a href="" class="dp2">2차메뉴1</a></li>
+                    <li><a href="" class="dp2">2차메뉴2</a></li>
+                    <li><a href="" class="dp2">2차메뉴3</a></li>
+                    <li><a href="" class="dp2">2차메뉴4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="page_tit">나열형 목록 - 이중구조</h2>
+        <p class="page_com">나열형 목록인 html5 웹 표준에서는 dl요소는 이중구조로 만들지 않도록 한다. 다만, 외부에 ul 또는 ol요소로 감싸고, 그 자식요소인
+        li의 내부 요소로 dl을 활용한다.</p>
+        <ul class="lst6">
+            ul.lst6>li*4>a.dp1{1차 메뉴$}+(<div class="sub_fr">
+                <dl class="lst6_sub">
+                    <dt>2차메뉴그룹제목1</dt>
+                    <dd><a href="" class="dp2">2차메뉴1</a></dd>
+                    <dd><a href="" class="dp2">2차메뉴2</a></dd>
+                    <dd><a href="" class="dp2">2차메뉴3</a></dd>
+                </dl>
+                <dl class="lst6_sub">
+                    <dt>2차메뉴그룹제목2</dt>
+                    <dd><a href="" class="dp2">2차메뉴1</a></dd>
+                    <dd><a href="" class="dp2">2차메뉴2</a></dd>
+                    <dd><a href="" class="dp2">2차메뉴3</a></dd>
+                </dl>
+                <dl class="lst6_sub">
+                    <dt>2차메뉴그룹제목3</dt>
+                    <dd><a href="" class="dp2">2차메뉴1</a></dd>
+                    <dd><a href="" class="dp2">2차메뉴2</a></dd>
+                    <dd><a href="" class="dp2">2차메뉴3</a></dd>
+                </dl>
+                <dl class="lst6_sub">
+                    <dt>2차메뉴그룹제목4</dt>
+                    <dd><a href="" class="dp2">2차메뉴1</a></dd>
+                    <dd><a href="" class="dp2">2차메뉴2</a></dd>
+                    <dd><a href="" class="dp2">2차메뉴3</a></dd>
+                </dl>
+            </div>
+            
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="page_tit">아이콘 목록- 아이콘 문자 사용</h2>
+        <ul class="lst7">
+            <li class="itme1"><a href=""><i class="xi-bars"></i></a></li>
+            <li class="itme2"><a href=""><i class="xi-home-o"></i></a></li>
+            <li class="itme3"><a href=""><i class="xi-cog"></i></a></li>
+            <li class="itme4"><a href=""><i class="xi-pen-o"></i></a></li>
+            <li class="itme5"><a href=""><i class="xi-star"></i></a></li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="page_tit">썸네일 목록 - 이미지 요소</h2>
+        <ul class="lst8">
+            <li><a href=""><img src="design_img/img1.jpg" alt=""></a></li>
+            <li><a href=""><img src="design_img/img2.jpg" alt=""></a></li>
+            <li><a href=""><img src="design_img/img3.jpg" alt=""></a></li>
+            <li><a href=""><img src="design_img/img4.jpg" alt=""></a></li>
+            <li><a href=""><img src="design_img/img5.jpg" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="page_tit">카드형 목록</h2>
+        <ul class="lst9">
+            <li>
+                <div class="box"><a href="">
+                <img src="" alt="">
+                <h3 class="lst9_tit">제목1</h3>
+                <p class="lst9_com">상품에 대한 설명1 상품에 대한 설명1 상품에 대한 설명1 상품에 대한 설명1 상품에 대한 설명1 상품에 대한 설명1 상품에 대한 설명1 상품에 대한 설명1 상품에 대한 설명1 상품에 대한 설명1</p>
+                <span class="lst9_detail">자세히</span>
+                </a></div>
+            </li>
+            <li>
+                <div class="box"><a href="">
+                <img src="" alt="">
+                <h3 class="lst9_tit">제목2</h3>
+                <p class="lst9_com">상품에 대한 설명2 상품에 대한 설명2 상품에 대한 설명2  상품에 대한 설명2 상품에 대한 설명2 상품에 대한 설명2 상품에 대한 설명2 상품에 대한 설명2 상품에 대한 설명2 상품에 대한 설명2</p>
+                <span class="lst9_detail">자세히</span>
+                </a></div>
+            </li>
+            <li>
+                <div class="box"><a href="">
+                <img src="" alt="">
+                 <h3 class="lst9_tit">제목3</h3>
+                <p class="lst9_com">상품에 대한 설명3 상품에 대한 설명3 상품에 대한 설명3 상품에 대한 설명3 상품에 대한 설명3 상품에 대한 설명3 상품에 대한 설명3 상품에 대한 설명3 상품에 대한 설명3 상품에 대한 설명3</p>
+                <span class="lst9_detail">자세히</span>
+                </a></div>
+            </li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="page_tit">여러 가지 목록기호 모양의 표시</h2>
+        <p class="page_com"></p>
+        <div class="lst10">
+            <ul class="item1">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item2">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item3">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item4">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item5">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item6">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item7">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item8">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item9">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item10">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item11">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item12">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item13">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item14">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item15">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item16">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item17">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+            <ul class="item18">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>

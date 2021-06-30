@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>강조 레이아웃</title>
+    <style>
+    * { margin: 0; padding: 0; }
+    body, html { width: 100%; }
+    ul { list-style: none; }
+    a { text-decoration: none;     }
+    .gnb { width: 240px; height: 100vh; 
+        background-color:rgba(0,0,0,0.35); position:fixed;
+        left: 0; top: 0; z-index:999; }
+    .logo { display:block; width: 240px; height: 120px; 
+        line-height: 120px; color:#fff; text-align: center;  
+        background-color:rgba(0,0,0,0.5); }
+    .gnb li a { display:block; height: 48px; line-height: 48px; 
+        padding-left: 40px; color:#fff; } 
+    .page { width: 100%; box-sizing:border-box; height: 100vh; 
+        position:relative; clear:both; }
+    .page_tit { text-align: center; line-height: 2; padding-top: 40px; }
+    #page1 { background-color:deeppink; }    
+    #page2 { background-color: deepskyblue; }
+    #page3 { background-color: darkgreen; }    
+    </style>
+</head>
+<body>
+    <nav class="gnb">
+        <a href="" class="logo">
+            LOGOTYPE
+        </a>
+        <ul>
+            <li><a href="">메인메뉴1</a></li>
+            <li><a href="">메인메뉴2</a></li>
+            <li><a href="">메인메뉴3</a></li>
+            <li><a href="">메인메뉴4</a></li>
+            <li><a href="">메인메뉴5</a></li>
+            <li><a href="">메인메뉴6</a></li>
+        </ul>
+    </nav>
+    <div id="content">
+        <section class="page" id="page1">
+            <h2 class="page_tit">페이지제목1</h2>
+            <div class="page_wrap">
+                
+            </div>
+        </section>
+        <section class="page" id="page2">
+            <h2 class="page_tit">페이지제목2</h2>
+            <div class="page_wrap">
+                
+            </div>
+        </section>
+        <section class="page" id="page3">
+            <h2 class="page_tit">페이지제목3</h2>
+            <div class="page_wrap">
+                
+            </div>
+        </section>
+    </div>
+</body>
+</html>
